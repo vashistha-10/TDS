@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Special Wala TDS</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- tsParticles container -->
+<div id="tsparticles"></div>
+<div id="mains" class="text-center my-3">Special Wala <b>TDS</b>
+  <br><br><span style="font-size:30px">Press Buttons below to PLAY!</span><br>
+  <button class="btn btn-success" onclick="jT()">Juniors Turn</button><br>
+  <button class="btn btn-primary" onclick="bT()">Bosses Turn</button><br>
+  <br><br>
+  <span id="res"></span>
+</div>
+<!-- https://github.com/matteobruni/tsparticles -->
+<script async="" defer="" src="https://buttons.github.io/buttons.js"></script>
+<!-- partial -->
+  <script src='https://cdn.jsdelivr.net/npm/tsparticles@1.25.0'></script>
+<script src='https://cdn.jsdelivr.net/npm/tsparticles-shape-confetti@1.10.0'></script><script  src="./script.js"></script>
+
+</body>
+<script>
+  Juniors = ["Saiyam", "Akshat", "Aaryan", "Deepanshu", "Rakshita", "Tanya", "Sandu", "Friday"];
+  Bosses = ["Parth", "Adarsh", "Gaurav", "Shubham", "Omkar", "Akash", "Aman"];
+  TDS = ["Truth", "Dare", "Situation"];
+
+  function jT(){
+    var M=Math.floor(Math.random() * 8);
+    var T=Math.floor(Math.random() * 3);
+    var MM = Juniors[M];
+    var TT = TDS[T];
+    var mm = "It is <span style='color:yellow'>";
+    mm+= MM;
+    mm+="'s</span> Turn and have to do <span style='color:yellow'>" + TT + "</span>";
+    document.getElementById("res").innerHTML = mm;
+  }
+
+    function bT(){
+    var M=Math.floor(Math.random() * 7);
+    var T=Math.floor(Math.random() * 3);
+    var MM = Bosses[M];
+    var TT = TDS[T];
+    var mm = "It is <span style='color:yellow'>";
+    mm+= MM;
+    mm+="'s</span> Turn and have to do <span style='color:yellow'>" + TT + "</span>";
+    document.getElementById("res").innerHTML = mm;
+  }
+
+
+</script>
+</html>
